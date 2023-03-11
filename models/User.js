@@ -42,6 +42,11 @@ const UserSchema = new Schema(
     }
 );
 
+// Count how many friends a user has
+UserSchema.virtual('friendCount').get(function() {
+    return this.friends.length
+});
+
 const User = model('User', UserSchema)
 
 // Export!!
