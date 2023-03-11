@@ -2,6 +2,38 @@
 const { Schema, model, Types } = require('mongoose');
 const dateFormat = require('../utils/dateFormat');
 
+// Create Reaction (subdoc) Schema (put before so it can be accessed by the ThoughtSchema)
+const ReactionSchema = new Schema(
+    {
+        reactionId: {
+            type: Schema.Types.ObjectId,
+            default: () => new Types.ObjectId(),
+        },
+        // 280 character max
+        reactionBody: {
+            type: String,
+            required: true,
+            maxlength: 280
+        },
+        username: {
+            type: String,
+            required: true,
+            trime: true
+        },
+        // Getter method to format timestamp on query
+        createdAt: {
+            type: Date,
+            default: Date.now,
+            get: createdAtVal => dateFormat(createdAtVal)
+        }
+    },
+    {
+        toJSON: {
+            getters: true
+        }
+    }
+);
+
 // Create Thought Schema
 const ThoughtSchema = new Schema(
     {
@@ -32,38 +64,6 @@ const ThoughtSchema = new Schema(
             virtuals: true
         },
         id: false
-    }
-);
-
-// Create Reaction (subdoc) Schema
-const ReactionSchema = new Schema(
-    {
-        reactionId: {
-            type: Schema.Types.ObjectId,
-            default: () => new Types.ObjectId(),
-        },
-        // 280 character max
-        reactionBody: {
-            type: String,
-            required: true,
-            maxlength: 280
-        },
-        username: {
-            type: String,
-            required: true,
-            trime: true
-        },
-        // Getter method to format timestamp on query
-        createdAt: {
-            type: Date,
-            default: Date.now,
-            get: createdAtVal => dateFormat(createdAtVal)
-        }
-    },
-    {
-        toJSON: {
-            getters: true
-        }
     }
 );
 

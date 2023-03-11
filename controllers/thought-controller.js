@@ -20,7 +20,7 @@ const ThoughtController = {
         Thought.findOne({ _id: params.thoughtId })
             .select('-__v')
             .then((dbThoughtData) => {
-                if (!dbThoughtData) => {
+                if (!dbThoughtData) {
                     res.status(404).json({ message: 'No thought associated with this id.' });
                     return;
                 }
@@ -55,7 +55,7 @@ const ThoughtController = {
     removeThought({ params }, res) {
         Thought.findOneAndDelete({ _id: params.thoughtId })
             .then(deletedthought => {
-                if (!deletedthought) => {
+                if (!deletedthought) {
                     return res.status(404).json({ message: 'No thought associated with this id.' });
                 }
                 return User.findOneAndUpdate(
