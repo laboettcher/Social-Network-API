@@ -61,7 +61,7 @@ After installing the above packages, run ```npm start``` in the terminal and beg
 
 ## Mock-Up
 
-![Untitled_ Mar 11, 2023 9_32 PM](https://user-images.githubusercontent.com/114205917/224526756-aa4de692-dc34-4162-b6b5-7a43d881caa8.gif)
+<img width="1145" alt="Screen Shot 2023-03-11 at 9 53 30 PM" src="https://user-images.githubusercontent.com/114205917/224527000-d5764c66-b0ea-4dcf-ae6b-036d8bd512e5.png">
 
 ## Walkthrough Video
 
