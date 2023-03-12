@@ -3,9 +3,7 @@
 
 ## Description
 
-```
 This challenge was to build an API for a social network app where users can add friends, create and share "thoughts," and react to their friends’ thoughts.
-```
 
 ## Tabe of Contents
 
@@ -63,9 +61,11 @@ After installing the above packages, run ```npm start``` in the terminal and beg
 
 ## Mock-Up
 
+![Untitled_ Mar 11, 2023 9_32 PM](https://user-images.githubusercontent.com/114205917/224526756-aa4de692-dc34-4162-b6b5-7a43d881caa8.gif)
 
 ## Walkthrough Video
 
+The full walkthrough can be viewed [here](https://drive.google.com/file/d/1HPQf2p-w7ZWIJR7958BputPWgmsvToiq/view).
 
 ## License 
 
@@ -75,4 +75,10 @@ After installing the above packages, run ```npm start``` in the terminal and beg
 
 ## References
 
-* []()
+* [Code Magazine](https://www.codemag.com/Article/2107051/Test-Your-REST-APIs-Using-Insomnia-REST-Client)
+
+* [Free Code Camp](https://www.freecodecamp.org/news/format-dates-with-ordinal-number-suffixes-javascript/)
+
+* [MDN](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes)
+
+* [MDN2](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
